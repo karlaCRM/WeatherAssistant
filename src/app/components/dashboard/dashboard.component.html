@@ -1,0 +1,46 @@
+<div class="container pt-5 pt-sm-3">
+  <div class="row ">
+    <div class="col-lg-4 imgCenter col-md-5 col-sm-10 d-flex justify-content-center">
+      <img [src]="urlImage" alt="weather" width="300px" height="300px" />
+    </div>
+    <div class="col-lg-6 col-md-7 mt-2">
+      <p class="text-center colText">
+        Please, write the name of the city you want to search
+      </p>
+      <input
+        type="text"
+        [(ngModel)]="city"
+        class="form-control size btn-form-control-lg"
+        placeholder="Your city"
+      />
+      <button
+        (click)="obtainWeather()"
+        class="btn btn-primary btn-lg size mt-4 w-100"
+        [disabled]="city == ''"
+      >
+        Weather
+      </button>
+      <div class="d-flex justify-content-center mt-2">
+        <div *ngIf="loading" class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+      <div *ngIf="query" class="card mt-3 cardBod">
+        <div class="card-body">
+          <span class="rowTemp">
+            <p><b>Temperature: </b> {{ temperature | number : "1.2-2" }} °C</p>
+            <p><b>Feels like: </b> {{ feels_like | number : "1.2-2" }} °C</p>
+          </span>
+          <span class="rowTemp"
+            ><p><b>T-max: </b> {{ temperature_max | number : "1.2-2" }} °C</p>
+            <p>
+              <b>T-min: </b> {{ temperature_min | number : "1.2-2" }} °C
+            </p></span
+          >
+          <p><b>Humidity: </b> {{ humidity }}</p>
+          <p class="weather"><b>Weather: </b> {{ weather }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

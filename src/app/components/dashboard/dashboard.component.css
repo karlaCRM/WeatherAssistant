@@ -1,0 +1,29 @@
+input{
+    text-align: center;
+}
+
+button{
+    font-size: 1.5rem;
+}
+
+.size{
+    font-size: 1.5rem;
+}
+
+.colText{
+    color:white;
+    font-weight: 600;
+}
+
+
+.cardBod{
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.rowTemp{
+    display: flex;
+    width: 98%;
+    justify-content: space-between;
+}
