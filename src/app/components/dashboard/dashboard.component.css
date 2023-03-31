@@ -17,7 +17,7 @@ button{
 
 
 .cardBod{
-    margin-bottom: 2em;
+    margin-bottom: 0.6em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -26,4 +26,8 @@ button{
     display: flex;
     width: 98%;
     justify-content: space-between;
+}
+
+.buttonMargin{
+    margin-bottom: 2em;
 }

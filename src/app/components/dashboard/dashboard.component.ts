@@ -56,4 +56,16 @@ obtainWeather(){
   })
 }
 
+clearEverything(){
+  this.temperature= 0;
+  this.humidity = 0;
+this.feels_like = 0;
+this.temperature_max = 0;
+this.temperature_min = 0;
+this.weather = "";
+  this.query=false;
+  this.loading=false;
+  this.city="";
+}
+
 }

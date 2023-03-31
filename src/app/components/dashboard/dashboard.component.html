@@ -40,7 +40,15 @@
           <p><b>Humidity: </b> {{ humidity }}</p>
           <p class="weather"><b>Weather: </b> {{ weather }}</p>
         </div>
+        
       </div>
+      <button *ngIf="query"
+      (click)="clearEverything()"
+      class="btn btn-secondary btn-sm size mt-1 w-100 buttonMargin"
+    >
+      Try again
+    </button>
     </div>
+    
   </div>
 </div>
