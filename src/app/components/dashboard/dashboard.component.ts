@@ -31,11 +31,11 @@ obtainWeather(){
   console.log(this.city)
   this._weatherService.getWeatherApi(this.city).subscribe({
     next: data => {
-      this.temperature= data.main.temp-273;
+      this.temperature= data.main.temp;
       this.humidity = data.main.humidity;
-    this.feels_like = data.main.feels_like -273;
-    this.temperature_max = data.main.temp_max-273;
-    this.temperature_min = data.main.temp_min-273;
+    this.feels_like = data.main.feels_like;
+    this.temperature_max = data.main.temp_max;
+    this.temperature_min = data.main.temp_min;
     this.weather = `${data.weather[0].main} with ${data.weather[0].description} `
       this.query=true;
       this.loading=false;
@@ -57,15 +57,16 @@ obtainWeather(){
 }
 
 clearEverything(){
-  this.temperature= 0;
-  this.humidity = 0;
+this.temperature= 0;
+
+this.humidity = 0;
 this.feels_like = 0;
 this.temperature_max = 0;
 this.temperature_min = 0;
 this.weather = "";
-  this.query=false;
-  this.loading=false;
-  this.city="";
+this.query=false;
+this.loading=false;
+this.city="";
 }
 
 }

@@ -12,7 +12,7 @@ url: string = "https://api.openweathermap.org/data/2.5/weather?&appid=";
   constructor(private http: HttpClient) { }
 
   getWeatherApi(city:string): Observable<any>{
-    const urlCity: string = this.url+this.key+'&q=' + city
+    const urlCity: string = this.url+this.key+'&q=' + city + '&units=metric'
     return this.http.get(urlCity)
   }
   
