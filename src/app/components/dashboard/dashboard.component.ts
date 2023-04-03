@@ -39,7 +39,7 @@ obtainWeather(){
     this.weather = `${data.weather[0].main} with ${data.weather[0].description} `
       this.query=true;
       this.loading=false;
-      console.log(data)
+  
     },
     error: error =>{
       this.loading=false;
